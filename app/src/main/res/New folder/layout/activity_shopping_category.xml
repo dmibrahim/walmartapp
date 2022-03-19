@@ -4,26 +4,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:orientation="vertical"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
-
-    android:background="@color/grey_200"
+    android:background="@color/mater_grey_300"
+    android:paddingTop="30dp"
+    android:paddingBottom="30dp"
     tools:ignore="UselessParent"
-    tools:context=".ShoppingCategoryActivity">
+    tools:context=".activity.ShoppingCategoryActivity">
 
     <TextView
         android:id="@+id/welcome_message"
         android:textSize="20sp"
+        android:textAlignment="center"
         android:text="welcome"
-        android:gravity="right"
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         />
 
     <LinearLayout
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="@dimen/horizontal_20"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -43,17 +42,18 @@
                 app:cardElevation="22dp">
                 <LinearLayout
                     android:clickable="true"
-                    android:id="@+id/electronicCategory"
+                    android:onClick="onElectronicsClick"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:focusable="true">
+                    android:focusable="true"
+                    tools:ignore="UsingOnClickInXml">
                     <ImageView
                         android:contentDescription="@string/electronics"
                         android:scaleType="fitCenter"
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
-                        android:src="@drawable/electronic"/>
+                        android:src="@drawable/electronics_category"/>
                     <TextView
                         android:layout_marginTop="8dp"
                         android:textAlignment="center"
@@ -73,10 +73,11 @@
                 app:cardCornerRadius="7dp"
                 app:cardElevation="22dp">
                 <LinearLayout
-                    android:id="@+id/clothesCategory"
+                    android:onClick="onClothesClick"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    tools:ignore="UsingOnClickInXml">
                     <ImageView
                         android:contentDescription="@string/clothes"
                         android:scaleType="fitCenter"
@@ -110,16 +111,17 @@
                 app:cardCornerRadius="7dp"
                 app:cardElevation="22dp">
                 <LinearLayout
-                    android:id="@+id/beautyCategory"
+                    android:onClick="onBeautyClick"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    tools:ignore="UsingOnClickInXml">
                     <ImageView
                         android:contentDescription="@string/beauty"
                         android:scaleType="fitCenter"
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
-                        android:src="@drawable/beauty"/>
+                        android:src="@drawable/beauty_category"/>
                     <TextView
                         android:layout_marginTop="8dp"
                         android:textAlignment="center"
@@ -139,7 +141,7 @@
                 app:cardCornerRadius="7dp"
                 app:cardElevation="22dp">
                 <LinearLayout
-                    android:id="@+id/foodCategory"
+                    android:onClick="onFoodClick"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"

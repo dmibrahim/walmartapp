@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.walmart" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/blue_500</item>
+        <item name="android:colorAccent">@color/blue_700</item>
+<!--        <item name="android:windowBackground">@color/gray_50</item>-->
+        <item name="colorButtonNormal">@color/blue_600</item>
+        <!-- Status bar color. -->
+        <item name="colorPrimaryDark">@color/blue_700</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>
